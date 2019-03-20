@@ -20,7 +20,17 @@ function movieThis() {
   const movieTitle = process.argv[3];
   axios.get("http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilogy")
       .then(function (response) {
-          console.log(response.data);
+        console.log("----------------------------------");
+          console.log("Title: " + response.data.Title);
+          console.log("Year: " + response.data.Year);
+          console.log("Rating: " + response.data.imdbRating);
+          console.log("Plot: " + response.data.Plot);
+          console.log("Country: " + response.data.Country);
+          console.log("Language: " + response.data.Language);
+          console.log("Actors: " + response.data.Actors);
+          
+          
+          console.log("----------------------------------");
       });
 }
 function spotifyThisSong() {
